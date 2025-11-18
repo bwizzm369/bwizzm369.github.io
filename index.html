@@ -3,10 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <title>إدارة الحياة بنور الوعي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #f7f4fb;
+      color: #222;
+      direction: rtl;
+      text-align: right;
+    }
+
+    header {
+      background: linear-gradient(90deg, #5b2c83, #7d3cb5);
+      color: #fff;
+      padding: 16px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #f3e8ff;
+      text-decoration: none;
+      margin-inline-start: 16px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      margin-top: 32px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+      padding: 32px 24px;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #3c1361;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 24px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      border-radius: 999px;
+      padding: 10px 20px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #7b2cbf;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #5a189a;
+    }
+
+    .btn-secondary {
+      background: #f3e8ff;
+      color: #4b0082;
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #3c1361;
+    }
+
+    section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .bullet-list {
+      margin-top: 8px;
+      padding-right: 18px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #4b0082;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .steps {
+      margin-top: 12px;
+      padding-right: 18px;
+    }
+
+    .steps li {
+      margin-bottom: 6px;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 16px;
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding: 24px 18px;
+      }
+
+      .hero-title {
+        font-size: 24px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        margin-top: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>إدارة الحياة بنور الوعي</h1>
-  <p>مرحبًا بكِ في مساحتكِ الخاصة لتنظيم الحياة بنور الوعي.</p>
-  <p>الموقع قيد الإنشاء، وسيتم إضافة الصفحات قريبًا بإذن الله.</p>
+  <header>
+    <div class="container" style="padding: 0 4px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+        <div class="logo">إدارة الحياة بنور الوعي</div>
+        <nav>
+          <a href="#">الصفحة الرئيسية</a>
+          <a href="#">الوعي اليومي</a>
+          <a href="#">تنظيم العمل والحياة</a>
+          <a href="#">القوالب والملفات</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="hero-title">إدارة الحياة بنور الوعي</h1>
+      <p class="hero-subtitle">
+        مساحة تساعدك على ترتيب يومك، وتخفيف فوضى الأفكار، وتنظيم أعمالك،  
+        باستخدام أدواتٍ بسيطة وأفكارٍ عميقة… حتى يصفو قلبك ويستقيم طريقك.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary">ابدئي رحلتك الآن</button>
+        <button class="btn-secondary">اكتشفي الأدوات المتاحة</button>
+      </div>
+    </section>
+
+    <!-- لماذا أحتاج إدارة الوعي؟ -->
+    <section>
+      <h2>لماذا أحتاج إلى إدارة الحياة بنور الوعي؟</h2>
+      <p>
+        لأن الفوضى ليست في الخارج فقط، بل في الداخل أيضًا. وحين يهدأ القلب، 
+        يصبح ترتيب اليوم، والعمل، والعلاقات، والبيت أسهل وألطف. هذا المكان لا يهدف إلى تغييركِ بالقوة، 
+        بل إلى مرافقتكِ في رحلة العودة إلى نفسك.
+      </p>
+      <ul class="bullet-list">
+        <li>عندما يتشتّت عقلك… يضيع وقتك.</li>
+        <li>عندما يهدأ قلبك… يتّسق يومك.</li>
+        <li>عندما تتّضح نيّتك… يصبح عملك بركة لا عبئًا.</li>
+      </ul>
+    </section>
+
+    <!-- ماذا ستجدين في هذا الموقع؟ -->
+    <section>
+      <h2>ماذا ستجدين في هذا الموقع؟</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>أدوات لتنظيم الحياة</h3>
+          <p>
+            جداول بسيطة تساعدك على ترتيب يومك بين العبادة، والأسرة، والعمل، والراحة؛ 
+            لتقتربي من التوازن دون تعقيد أو شعور بالذنب.
+          </p>
+        </div>
+        <div class="card">
+          <h3>خطوات للوعي اليومي</h3>
+          <p>
+            أسئلة وتذكيرات ودفاتر للمراجعة الهادئة، 
+            تساعدك على فهم نفسك بدل جلدها، ورؤية يومك بعينٍ أرحم.
+          </p>
+        </div>
+        <div class="card">
+          <h3>قوالب وملفات جاهزة</h3>
+          <p>
+            قوالب Google Sheets وNotion لتنظيم الوقت، والأهداف، والمشاريع، والمال؛ 
+            يمكنك تحميلها والبدء في استخدامها فورًا.
+          </p>
+        </div>
+        <div class="card">
+          <h3>الذكاء الاصطناعي كوسيلة للراحة</h3>
+          <p>
+            أفكار عملية لاستعمال الذكاء الاصطناعي في تخفيف عبء التفاصيل عنك، 
+            دون أن يسرق حضورك القلبي أو يتحوّل إلى مصدر ضغط جديد.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- التقنية خادم لا سيد -->
+    <section>
+      <h2>كيف نتعامل مع التقنية هنا؟</h2>
+      <p>
+        التقنية في هذا الموقع ليست غاية، ولا بديلًا عن القلب، 
+        بل أداة تنظّم اليوم وتمنحك وقتًا ومساحة لنفسك، ولعبادتك، ولمن تحبّين.  
+        نرتّب الخارج… لنوسّع مساحة الداخل.
+      </p>
+      <p>
+        لا نقدِّم فتاوى، ولا ندخل في ما لا نعلم،  
+        بل نشارك أدوات عملية، مع لغةٍ تحفظ الاحترام للدين، والحياء للروح.
+      </p>
+    </section>
+
+    <!-- من أنا -->
+    <section>
+      <h2>من تقف خلف هذا المشروع؟</h2>
+      <p>
+        أنا إيمان، مسلمة أسير في طريق الوعي، وأتعلّم كل يوم كيف أكون أكثر حضورًا ورحمةً مع نفسي.  
+        عشتُ فتراتٍ من الفوضى الداخلية، وكثرة الانشغال، وضياع التركيز؛ ثم تعلّمت أن ترتيب الحياة لا يحتاج تعقيدًا، 
+        بل يحتاج نورًا، وصدقًا، ونياتٍ صافية.
+      </p>
+      <p>
+        في هذا الموقع أشارككِ ما تعلّمته وما زلتُ أتعلمه،  
+        لعلّ فيه ما ينفع قلبكِ ويخفّف عنكِ ثقل الأيام.
+      </p>
+    </section>
+
+    <!-- من أين أبدأ؟ -->
+    <section>
+      <h2>من أين أبدأ رحلتي؟</h2>
+      <ul class="steps">
+        <li><strong>1. اقرئي دليل الوعي الأول:</strong> تعرّفي على معنى إدارة الحياة بنور الوعي، وكيف تغيّر نظرتكِ ليومك.</li>
+        <li><strong>2. حمّلي أوّل قالب لتنظيم اليوم:</strong> جدول بسيط يجمع بين العبادة، والواجبات، والعمل، والراحة.</li>
+        <li><strong>3. اشتركي في التحديثات:</strong> ليصلك بين الحين والآخر تذكير لطيف، وأداة جديدة، وفكرة تساعدك على العودة إلى نيتك الأولى.</li>
+      </ul>
+      <div class="hero-buttons" style="margin-top: 12px;">
+        <button class="btn-primary">اقرئي دليل البداية</button>
+        <button class="btn-secondary">تحميل القالب الأول</button>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> إدارة الحياة بنور الوعي – مساحة صغيرة لقلبٍ أكثر حضورًا.
+    </footer>
+  </main>
+
+  <script>
+    // تحديث السنة تلقائيًا
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
