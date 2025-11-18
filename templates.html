@@ -55,27 +55,26 @@
       line-height: 1.8;
       color: #333;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+    section {
+      margin-top: 24px;
     }
-    .card {
+    .template-box {
       background: #fff;
       border-radius: 14px;
       padding: 18px 16px;
       box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+      margin-top: 12px;
     }
-    .card h3 {
+    .template-box h3 {
       font-size: 16px;
       margin-bottom: 6px;
       color: #1e3a8a;
     }
-    .card p {
+    .template-box p {
       font-size: 14px;
       line-height: 1.8;
       color: #444;
+      margin-bottom: 10px;
     }
     .tag {
       display: inline-block;
@@ -84,12 +83,34 @@
       font-size: 12px;
       padding: 4px 10px;
       border-radius: 999px;
-      margin-top: 6px;
+      margin-top: 4px;
+      margin-bottom: 10px;
     }
-    ul {
-      padding-right: 18px;
-      font-size: 15px;
-      line-height: 1.9;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+      background: #f9fafb;
+    }
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 8px 6px;
+      vertical-align: top;
+    }
+    th {
+      background: #e0f2fe;
+      font-weight: 600;
+      color: #0f172a;
+      text-align: center;
+    }
+    td {
+      min-height: 32px;
+    }
+    .hint {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 6px;
     }
     footer {
       margin-top: 40px;
@@ -99,8 +120,8 @@
       color: #666;
     }
     @media (max-width: 640px) {
-      .grid {
-        grid-template-columns: 1fr;
+      table, thead, tbody, th, td, tr {
+        font-size: 13px;
       }
     }
   </style>
@@ -123,94 +144,177 @@
   <main class="container">
     <h1>القوالب والملفات الجاهزة</h1>
     <p>
-      هذه الصفحة مخصّصة لكل ما يساعدكِ عمليًا: جداول، قوالب، وملفات يمكنك نسخها أو تحميلها،  
-      لتخفيف العبء الذهني عنكِ، وتسهيل تنظيم يومك وحياتك بنور الوعي.
+      في هذه الصفحة تجدين قوالب جاهزة يمكن استخدامها مباشرة من المتصفّح،  
+      أو طباعتها، أو نسخها إلى ملفاتك الخاصة.  
+      الهدف منها ليس الكمال… بل التخفيف عن ذهنك، وتنظيم يومك بنور الوعي.
     </p>
 
+    <!-- قالب 1: يومي بين الروح والحياة -->
     <section>
-      <h2>أولًا: قوالب لتنظيم اليوم</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>قالب "يومي بين الروح والحياة"</h3>
-          <p>
-            جدول بسيط يقسم اليوم إلى فترات، مع مساحة للروح، والعمل، والعلاقات، والراحة.  
-            يمكنك استعماله في Google Sheets أو طباعته في ورقة.
-          </p>
-          <span class="tag">قريبًا: رابط للتحميل</span>
-        </div>
-        <div class="card">
-          <h3>قالب "جدول الوعي اليومي"</h3>
-          <p>
-            صفحة واحدة تجمع أسئلة الوعي اليومي، مع خانة لكتابة ما تعلّمته من هذا اليوم،  
-            حتى لو كان سطرًا واحدًا فقط.
-          </p>
-          <span class="tag">قريبًا: نسخة جاهزة للطباعة</span>
-        </div>
+      <div class="template-box">
+        <h3>قالب "يومي بين الروح والحياة"</h3>
+        <p>
+          جدول بسيط يساعدك على توزيع يومك بين أربعة مجالات رئيسية: الروح، العمل، العلاقات، ونفسك أنتِ.
+        </p>
+        <span class="tag">قالب يومي</span>
+
+        <table>
+          <thead>
+            <tr>
+              <th>الفترة</th>
+              <th>الروح<br>(عبادة / ذكر / نية)</th>
+              <th>العمل / الدراسة</th>
+              <th>الأسرة / العلاقات</th>
+              <th>نفسي أنا<br>(راحة / حركة / هواية)</th>
+              <th>ملاحظات اليوم</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>الصباح</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>منتصف اليوم</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>بعد العصر</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>المساء</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="hint">
+          يمكنك طباعة هذا الجدول من المتصفّح، أو نسخه إلى ملف Word / Google Docs وملئه يوميًا.
+        </p>
       </div>
     </section>
 
+    <!-- قالب 2: جدول الوعي اليومي -->
     <section>
-      <h2>ثانيًا: قوالب لتنظيم العمل والمهام</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>قائمة المهام الهادئة</h3>
-          <p>
-            قائمة مهام لا تعتمد على الضغط والسرعة، بل على ترتيب الأولويات،  
-            مع خانة لما يمكن تأجيله دون شعور بالذنب.
-          </p>
-          <span class="tag">مناسب للعمل من البيت أو المكتب</span>
-        </div>
-        <div class="card">
-          <h3>قالب "أسبوع العمل الواعي"</h3>
-          <p>
-            جدول أسبوعي يقسّم الأعمال على الأيام،  
-            مع خانة صغيرة لكل يوم لتسجيل شعورك في نهاية الدوام.
-          </p>
-          <span class="tag">قريبًا: ملف Google Sheets</span>
-        </div>
+      <div class="template-box">
+        <h3>قالب "جدول الوعي اليومي"</h3>
+        <p>
+          يساعدك هذا القالب على مراجعة يومك بهدوء من خلال ثلاث أسئلة أساسية، دون جلدٍ للنفس أو قسوة.
+        </p>
+        <span class="tag">مراجعة يومية</span>
+
+        <table>
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>ماذا استنزف طاقتي اليوم؟</th>
+              <th>ما الذي أعطى قلبي بعض الهدوء؟</th>
+              <th>ما النيّة الصغيرة التي أريد تجديدها للغد؟</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="hint">
+          يمكنك إنشاء نسخة أسبوعية من هذا الجدول، واستعمال سطر واحد لكل يوم، أو طباعة جدول منفصل لكل يوم.
+        </p>
       </div>
     </section>
 
+    <!-- قالب 3: تتبّع المصاريف بنية البركة -->
     <section>
-      <h2>ثالثًا: قوالب للمال والرزق</h2>
-      <p>
-        الهدف من تنظيم المال هنا ليس الهوس بالأرقام،  
-        بل رؤية الرزق كأمانة ونعمة، وتعلّم التعامل معه بهدوء ووعي.
-      </p>
-      <div class="grid">
-        <div class="card">
-          <h3>قالب "تتبّع المصاريف بنية البركة"</h3>
-          <p>
-            جدول بسيط لتسجيل المصاريف الأساسية خلال الشهر،  
-            مع خانة صغيرة لكتابة: "ما الذي تعلّمته من طريقة صرفي هذا الأسبوع؟"
-          </p>
-          <span class="tag">يناسب البدايات</span>
-        </div>
-        <div class="card">
-          <h3>قالب "مسارات الرزق"</h3>
-          <p>
-            ملف يساعدك على رؤية مصادر دخلك المختلفة،  
-            وما هي المسارات التي تريدين تنميتها أو التقليل منها.
-          </p>
-          <span class="tag">قريبًا: مثال عملي</span>
-        </div>
-      </div>
-    </section>
+      <div class="template-box">
+        <h3>قالب "تتبّع المصاريف بنية البركة"</h3>
+        <p>
+          الهدف من هذا القالب ليس مراقبة المال بقلق، بل رؤيته بوضوح، والتعامل معه بنية البركة لا بنية الخوف.
+        </p>
+        <span class="tag">تنظيم المال</span>
 
-    <section>
-      <h2>كيف ستُستخدَم هذه القوالب؟</h2>
-      <p>
-        قريبًا، ستجدين بجانب كل قالب أحد هذه الاختيارات:
-      </p>
-      <ul>
-        <li><strong>فتح القالب في Google Sheets:</strong> بنقرة واحدة لبدء الاستخدام مباشرة.</li>
-        <li><strong>تحميل ملف PDF للطباعة:</strong> إذا كنتِ تفضّلين الكتابة باليد.</li>
-        <li><strong>نسخ هيكل القالب إلى Notion:</strong> لمن يحبون تنظيم حياتهم في مساحة رقمية واحدة.</li>
-      </ul>
-      <p>
-        يمكنك استعمال القوالب كما هي، أو تعديلها بما يناسب حياتكِ وظروفكِ،  
-        فالفكرة ليست المثالية… بل التخفيف عن قلبك وتنظيم يومك.
-      </p>
+        <table>
+          <thead>
+            <tr>
+              <th>التاريخ</th>
+              <th>نوع المصروف</th>
+              <th>المبلغ</th>
+              <th>وسيلة الدفع</th>
+              <th>هل كان ضروريًا؟</th>
+              <th>ماذا تعلّمت من هذا الأسبوع؟</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td>أساسي (غذاء / سكن / علاج)</td>
+              <td></td>
+              <td>نقدًا / بطاقة</td>
+              <td>نعم / لا / لست متأكدة</td>
+              <td rowspan="4"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>تنقّل / مواصلات</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>تعليم / كتب / دورات</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>ترفيه / كماليات</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="hint">
+          في نهاية كل أسبوع، اكتبي في الخانة الأخيرة:  
+          "ما الذي تعلّمته من طريقة صرفي؟ وما التعديل الصغير الذي أريد تجربته الأسبوع القادم؟"
+        </p>
+      </div>
     </section>
 
     <footer>
@@ -223,4 +327,3 @@
   </script>
 </body>
 </html>
-add templates page
