@@ -13,6 +13,7 @@
       direction: rtl;
       text-align: right;
     }
+
     header {
       background: linear-gradient(90deg, #0f3b75, #2563eb);
       color: #fff;
@@ -22,22 +23,26 @@
       z-index: 10;
       box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
     }
+
     .container {
       max-width: 960px;
       margin: 0 auto;
       padding: 24px 16px 48px;
     }
+
     .logo {
       font-weight: 700;
       font-size: 20px;
       letter-spacing: 0.5px;
     }
+
     nav a {
       color: #dbeafe;
       text-decoration: none;
       margin-inline-start: 16px;
       font-size: 14px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
@@ -47,12 +52,14 @@
       color: #0f3b75;
       margin-bottom: 10px;
     }
+
     h2 {
       font-size: 20px;
       color: #1d4ed8;
       margin-top: 20px;
       margin-bottom: 8px;
     }
+
     p {
       font-size: 15px;
       line-height: 1.9;
@@ -79,6 +86,27 @@
       margin-bottom: 10px;
     }
 
+    .name-field {
+      margin-top: 10px;
+      margin-bottom: 16px;
+    }
+
+    .name-field label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 4px;
+      color: #0f3b75;
+    }
+
+    .name-field input {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #bfdbfe;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
     .question {
       background: rgba(255, 255, 255, 0.96);
       border-radius: 14px;
@@ -87,37 +115,22 @@
       border: 1px solid rgba(191, 219, 254, 0.7);
       margin-bottom: 14px;
     }
+
     .question h3 {
       font-size: 15px;
       margin-bottom: 6px;
       color: #0f3b75;
     }
+
     .options label {
       display: block;
       font-size: 14px;
       margin-bottom: 6px;
       cursor: pointer;
     }
+
     .options input {
       margin-left: 6px;
-    }
-
-    .name-field {
-      margin-bottom: 16px;
-    }
-    .name-field label {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 4px;
-      color: #0f3b75;
-    }
-    .name-field input {
-      width: 100%;
-      padding: 8px 10px;
-      border-radius: 10px;
-      border: 1px solid #bfdbfe;
-      font-size: 14px;
-      box-sizing: border-box;
     }
 
     .btn-primary {
@@ -131,6 +144,7 @@
       box-shadow: 0 10px 25px rgba(37, 99, 235, 0.35);
       margin-top: 16px;
     }
+
     .btn-primary:hover {
       background: #1d4ed8;
     }
@@ -144,17 +158,17 @@
       border: 1px solid rgba(191, 219, 254, 0.9);
       display: none;
     }
-    .result-box h2 {
-      margin-top: 0;
-    }
+
     .result-section {
       margin-top: 10px;
     }
+
     .result-title {
       font-weight: 600;
       color: #1e40af;
       margin-bottom: 4px;
     }
+
     .element-pill {
       display: inline-block;
       padding: 4px 12px;
@@ -164,6 +178,13 @@
       font-size: 13px;
       margin-inline-end: 8px;
       margin-top: 4px;
+    }
+
+    .result-box ul {
+      padding-right: 18px;
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 1.8;
     }
 
     footer {
@@ -217,9 +238,7 @@
       </div>
     </div>
 
-    <!-- الأسئلة -->
     <form id="quiz-form">
-
       <!-- 1 -->
       <div class="question">
         <h3>1. عندما تتخيّلين نفسك تخلقين محتوى… ما الذي يحمّسك أكثر؟</h3>
@@ -335,9 +354,9 @@
         <h3>11. من بين هذه العناصر الأربعة، أي واحد تحسين أنه الأقرب لك اليوم؟</h3>
         <div class="options">
           <label><input type="radio" name="q11" value="video-fire" />النار: الحماس، الحركة، الجرأة.</label>
-          <label><input type="radio" name="q11" value="audio-water" />الماء: الإحساس، اللين، الاحتواء.</label>
+          <label><input type="radio" name="q11" value="audio-water" />الماء: اللين، الإحساس، التعاطف.</label>
           <label><input type="radio" name="q11" value="visual-air" />الهواء: الأفكار، الخيال، الحرية.</label>
-          <label><input type="radio" name="q11" value="writing-earth" />الأرض: الثبات، العمق، الاستمرارية.</label>
+          <label><input type="radio" name="q11" value="writing-earth" />الأرض: الثبات، الالتزام، العمق.</label>
         </div>
       </div>
 
@@ -388,7 +407,6 @@
       <button type="button" class="btn-primary" onclick="calculateResult()">اكتشفي طريقك الآن</button>
     </form>
 
-    <!-- النتيجة -->
     <div id="result-box" class="result-box">
       <h2>نتيجتك في هذا الاختبار</h2>
       <div class="result-section" id="name-result"></div>
@@ -396,6 +414,7 @@
       <div class="result-section" id="element-result"></div>
       <div class="result-section" id="weak-element-result"></div>
       <div class="result-section" id="advice-result"></div>
+      <div class="result-section" id="suggestion-result" style="margin-top: 20px;"></div>
     </div>
 
     <footer>
@@ -406,12 +425,206 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // اقتراح القناة + 3 أفكار حسب نوع المحتوى والعنصر
+    function suggestionFor(content, element) {
+      if (content === "video" && element === "fire") {
+        return {
+          title: "ابدئي بقناة تحفيز قصيرة – حضور قوي",
+          type: "فيديوهات قصيرة ملهمة (Face أو Faceless)",
+          ideas: [
+            "سرّ القرار الذي غيّر حياتي بلا مقدمات",
+            "لماذا نخاف البداية أكثر من الطريق؟",
+            "جملة واحدة حرّرتني من التسويف"
+          ]
+        };
+      }
+      if (content === "video" && element === "water") {
+        return {
+          title: "ابدئي بقناة رسائل هادئة – Healing Videos",
+          type: "فيديوهات لطيفة بخلفيات طبيعية وموسيقى هادئة",
+          ideas: [
+            "رسالة قصيرة لقلب مرهق اليوم",
+            "كيف أهدّئ روحي عندما يكثر الضجيج؟",
+            "٣ جمل تهدئ أي قلب متعب"
+          ]
+        };
+      }
+      if (content === "video" && element === "air") {
+        return {
+          title: "ابدئي بقناة Faceless – AI Wisdom",
+          type: "Slides + AI + حكم يومية",
+          ideas: [
+            "فكرة يومية مع خلفية AI",
+            "لماذا نفشل لأننا نفكر أكثر؟",
+            "حكمة قصيرة تغيّر يومك"
+          ]
+        };
+      }
+      if (content === "video" && element === "earth") {
+        return {
+          title: "ابدئي بقناة تعليم وتنظيم",
+          type: "فيديوهات خطوات عملية واضحة",
+          ideas: [
+            "٣ خطوات صغيرة تغيّر يومك",
+            "كيف تلتزمين رغم التعب؟",
+            "دفتر النوايا: كيف يغيّر حياتك"
+          ]
+        };
+      }
+
+      if (content === "audio" && element === "fire") {
+        return {
+          title: "بودكاست تحفيز – 5 دقائق طاقة",
+          type: "رسائل صوتية قصيرة بحضور قوي",
+          ideas: [
+            "لماذا تحتاجين قرارًا لا شعورًا؟",
+            "كيف تبدأين رغم الخوف؟",
+            "معنى الشجاعة الروحية"
+          ]
+        };
+      }
+      if (content === "audio" && element === "water") {
+        return {
+          title: "بودكاست روحاني – Healing Audio",
+          type: "رسائل صوتية حنونة وهادئة",
+          ideas: [
+            "رسالة لليوم المتعب",
+            "أين يذهب وجع القلب؟",
+            "دعاء يلهمك السكينة"
+          ]
+        };
+      }
+      if (content === "audio" && element === "air") {
+        return {
+          title: "بودكاست أفكار وتأملات",
+          type: "تحليل أفكار + وعي",
+          ideas: [
+            "الفكرة التي تغيّر علاقتك بنفسك",
+            "لماذا تتكرر نفس الدروس؟",
+            "مفهوم نقطة التحول"
+          ]
+        };
+      }
+      if (content === "audio" && element === "earth") {
+        return {
+          title: "بودكاست خطوات عملية",
+          type: "صوت هادئ + تنظيم واقعي",
+          ideas: [
+            "كيف تصنعين عادة لا تنطفئ؟",
+            "روتين أسبوعي سهل",
+            "عادة بسيطة تغيّر يومك"
+          ]
+        };
+      }
+
+      if (content === "visual" && element === "fire") {
+        return {
+          title: "قناة Visual Motivation – Faceless",
+          type: "AI + Quotes قوية",
+          ideas: [
+            "جملة تغيّر يومك",
+            "لماذا النار في داخلك لم تمت بعد؟",
+            "انطلقي قبل أن تكوني جاهزة"
+          ]
+        };
+      }
+      if (content === "visual" && element === "water") {
+        return {
+          title: "قناة هدوء بصري – Soft AI",
+          type: "طبيعة + رسائل لينة",
+          ideas: [
+            "تنفّسي… كل شيء يمر",
+            "كيف أهدّئ روحي؟",
+            "رسالة حب للذات"
+          ]
+        };
+      }
+      if (content === "visual" && element === "air") {
+        return {
+          title: "قناة AI Concept + حكم",
+          type: "رسومات AI + حكم يومية",
+          ideas: [
+            "فكرة اليوم",
+            "حكمة بألوان AI",
+            "رسومات AI + جملة قصيرة"
+          ]
+        };
+      }
+      if (content === "visual" && element === "earth") {
+        return {
+          title: "قناة Templates – Faceless",
+          type: "تنظيم يومي / مالي / نوايا",
+          ideas: [
+            "جدول يومي بسيط",
+            "Template للمال",
+            "نوايا أسبوعية"
+          ]
+        };
+      }
+
+      if (content === "writing" && element === "fire") {
+        return {
+          title: "مدونة تحفيز",
+          type: "مقالات قصيرة قوية",
+          ideas: [
+            "لماذا نخاف البدايات؟",
+            "الشجاعة اليومية",
+            "3 عادات تشعل طاقتك"
+          ]
+        };
+      }
+      if (content === "writing" && element === "water") {
+        return {
+          title: "مدونة روحانية حساسة",
+          type: "كتابة لينة وعميقة",
+          ideas: [
+            "رسائل لنفسي التي تعبت",
+            "قوة اللين",
+            "كيف أتعامل مع الأيام الثقيلة؟"
+          ]
+        };
+      }
+      if (content === "writing" && element === "air") {
+        return {
+          title: "مدونة أفكار ووعي",
+          type: "كتابة خفيفة ذكية",
+          ideas: [
+            "الفكرة التي تغيّر نظرتك للحياة",
+            "لماذا نحتاج خيالًا أكثر؟",
+            "معنى الحرية الداخلية"
+          ]
+        };
+      }
+      if (content === "writing" && element === "earth") {
+        return {
+          title: "مدونة خطوات عملية",
+          type: "كتابة منظمة وواضحة",
+          ideas: [
+            "عادة واحدة تغيّر حياتك",
+            "دفتر النوايا الأسبوعي",
+            "تنظيم وقتك بلا ضغط"
+          ]
+        };
+      }
+
+      // fallback
+      return {
+        title: "ابدئي بما تشعرين أنه الأقرب لقلبك الآن",
+        type: "أي نوع محتوى يمكنك الاستمرار عليه بهدوء",
+        ideas: [
+          "احكِي قصتك مع البدايات",
+          "اكتبي/سجلي ما الذي تبحثين عنه اليوم",
+          "شاركي درسًا واحدًا غيّر شيئًا فيك"
+        ]
+      };
+    }
+
     function calculateResult() {
       const form = document.getElementById('quiz-form');
       const nameInput = document.getElementById('username');
       const name = nameInput.value.trim();
 
-      // التحقق من الإجابات
+      // التأكد من الإجابة على جميع الأسئلة
       for (let i = 1; i <= 15; i++) {
         const radios = form.querySelectorAll('input[name="q' + i + '"]');
         const checked = Array.from(radios).some(r => r.checked);
@@ -421,48 +634,28 @@
         }
       }
 
-      // نقاط نوع المحتوى
-      const contentScores = {
-        video: 0,
-        writing: 0,
-        audio: 0,
-        visual: 0
-      };
-
-      // نقاط العناصر
-      const elementScores = {
-        fire: 0,
-        water: 0,
-        air: 0,
-        earth: 0
-      };
-
-      // عنصر ضعيف من السؤال 12
+      const contentScores = { video: 0, writing: 0, audio: 0, visual: 0 };
+      const elementScores = { fire: 0, water: 0, air: 0, earth: 0 };
       let weakElementFromUser = null;
 
       for (let i = 1; i <= 15; i++) {
         const radios = form.querySelectorAll('input[name="q' + i + '"]');
         let value = null;
-        radios.forEach(r => {
-          if (r.checked) value = r.value;
-        });
-
+        radios.forEach(r => { if (r.checked) value = r.value; });
         if (!value) continue;
 
         if (value.startsWith('weak-')) {
           weakElementFromUser = value.replace('weak-', '');
         } else {
-          const [contentType, elementType] = value.split('-');
-          if (contentScores[contentType] != null) {
-            contentScores[contentType]++;
-          }
-          if (elementScores[elementType] != null) {
-            elementScores[elementType]++;
-          }
+          const parts = value.split('-'); // ex: "video-fire"
+          const contentType = parts[0];
+          const elementType = parts[1];
+          if (contentScores[contentType] != null) contentScores[contentType]++;
+          if (elementScores[elementType] != null) elementScores[elementType]++;
         }
       }
 
-      // تحليل الاسم (رمزي وبسيط)
+      // تحليل رمزي للاسم
       let nameElement = null;
       if (name.length > 0) {
         const len = name.length;
@@ -473,7 +666,7 @@
         else nameElement = 'fire';
       }
 
-      // اختيار نوع المحتوى الرئيسي
+      // اختيار نوع المحتوى
       let bestContentType = null;
       let bestContentScore = -1;
       Object.keys(contentScores).forEach(key => {
@@ -493,7 +686,7 @@
         }
       });
 
-      // العنصر الأضعف (من النقاط)
+      // العنصر الأضعف
       let weakestElement = null;
       let weakestScore = Infinity;
       Object.keys(elementScores).forEach(key => {
@@ -503,12 +696,10 @@
         }
       });
 
-      // لو المستخدم اختار عنصر ضعيف في السؤال 12 نعتمده
       if (weakElementFromUser) {
         weakestElement = weakElementFromUser;
       }
 
-      // تحويل الأكواد إلى نص عربي
       function elementToText(el) {
         switch (el) {
           case 'fire': return 'النار – الحماس، البداية، الشجاعة';
@@ -519,41 +710,16 @@
         }
       }
 
-      function elementNameOnly(el) {
-        switch (el) {
-          case 'fire': return 'النار';
-          case 'water': return 'الماء';
-          case 'air': return 'الهواء';
-          case 'earth': return 'الأرض';
-          default: return '';
-        }
-      }
-
       function contentTypeToText(t) {
         switch (t) {
           case 'video':
-            return 'محتوى الفيديو (ظهور أو Faceless بحضور قوي) – يناسبك أن يكون لك حضور بصري واضح أو طاقة حركية.';
+            return 'محتوى الفيديو – يناسبك أن يكون لك حضور بصري واضح أو طاقة حركية، سواء بوجهك أو Faceless.';
           case 'writing':
-            return 'محتوى الكتابة (مقالات، تدوينات، Newsletter) – يناسبك أن تعبّري بهدوء وعمق وبنصوص مكتوبة.';
+            return 'محتوى الكتابة – مقالات، تدوينات، Newsletter… التعبير بالكتابة العميقة والواضحة.';
           case 'audio':
-            return 'محتوى صوتي (بودكاست، رسائل صوتية، تلاوات) – صوتك يمكن أن يكون جسرًا لقلوب الناس.';
+            return 'محتوى صوتي – بودكاست، رسائل صوتية، تلاوات… صوتك يمكن أن يكون جسرًا لقلوب الناس.';
           case 'visual':
-            return 'محتوى بصري/إبداعي (Slides، تصاميم، AI، قوالب) – يناسبك اللعب بالألوان والصور والأشكال.';
-          default:
-            return '';
-        }
-      }
-
-      function adviceForWeakElement(el) {
-        switch (el) {
-          case 'fire':
-            return 'عنصر النار عندك يحتاج دعمًا: جرّبي أن تعطي لنفسك إذنًا بالتجرِبة والبداية ولو بأشياء صغيرة، ولا تنتظري الكمال.';
-          case 'water':
-            return 'عنصر الماء يحتاج عناية: اسمحي لنفسك أن تعبّري عن شعورك كتابة أو صوتًا، ولا تحملي كل شيء في الداخل وحدك.';
-          case 'air':
-            return 'عنصر الهواء منخفض: أعطي لنفسك مساحة للخيال، للعصف الذهني، ولأفكار جديدة بدون حكم، حتى ينساب الإبداع في محتواك.';
-          case 'earth':
-            return 'عنصر الأرض ضعيف: ركّزي على بناء عادات صغيرة وثابتة، مثل محتوى أسبوعي بسيط، بدل انتظار طاقة كبيرة نادرة.';
+            return 'محتوى بصري / إبداعي – Slides، تصاميم، AI… اللعب بالألوان والصور والأشكال.';
           default:
             return '';
         }
@@ -574,14 +740,29 @@
         }
       }
 
+      function adviceForWeakElement(el) {
+        switch (el) {
+          case 'fire':
+            return 'عنصر النار عندك يحتاج دعمًا: جرّبي أن تعطي لنفسك إذنًا بالتجرِبة والبداية ولو بأشياء صغيرة، ولا تنتظري الكمال.';
+          case 'water':
+            return 'عنصر الماء يحتاج عناية: اسمحي لنفسك أن تعبّري عن شعورك كتابة أو صوتًا، ولا تحملي كل شيء في الداخل وحدك.';
+          case 'air':
+            return 'عنصر الهواء منخفض: أعطي لنفسك مساحة للخيال، للعصف الذهني، ولأفكار جديدة بدون حكم، حتى ينساب الإبداع في محتواك.';
+          case 'earth':
+            return 'عنصر الأرض ضعيف: ركّزي على بناء عادات صغيرة وثابتة، مثل محتوى أسبوعي بسيط، بدل انتظار طاقة كبيرة نادرة.';
+          default:
+            return '';
+        }
+      }
+
       const resultBox = document.getElementById('result-box');
       const nameResult = document.getElementById('name-result');
       const contentResult = document.getElementById('content-result');
       const elementResult = document.getElementById('element-result');
       const weakElementResult = document.getElementById('weak-element-result');
       const adviceResult = document.getElementById('advice-result');
+      const suggestionResult = document.getElementById('suggestion-result');
 
-      // اسم + عنصر رمزي
       if (name.length > 0 && nameElement) {
         nameResult.innerHTML = `
           <div class="result-title">لمسة رمزية من اسمك:</div>
@@ -594,32 +775,41 @@
         `;
       }
 
-      // نوع المحتوى
       contentResult.innerHTML = `
         <div class="result-title">نوع المحتوى الأقرب لطبيعتك الآن:</div>
         <p>${contentTypeToText(bestContentType)}</p>
       `;
 
-      // العنصر الأقوى
       elementResult.innerHTML = `
         <div class="result-title">عنصرك الأقوى في هذه المرحلة:</div>
         <span class="element-pill">${elementToText(bestElement)}</span>
       `;
 
-      // العنصر الأضعف
       weakElementResult.innerHTML = `
         <div class="result-title">العنصر الذي يحتاج توازنًا أكثر عندك:</div>
         <span class="element-pill">${elementToText(weakestElement)}</span>
       `;
 
-      // نصيحة عامة
       adviceResult.innerHTML = `
         <div class="result-title">إرشاد لطيف لمسارك في صناعة المحتوى:</div>
         <p>${adviceForWeakElement(weakestElement)}</p>
         <p>
-          تذكّري: هذا الاختبار مجرّد مرآة صغيرة لتتعرفي على نفسك،  
+          تذكّري: هذا الاختبار مرآة صغيرة لتتعرفي على نفسك،  
           والمسار الحقيقي يُبنى بالتجربة، والدعاء، وخطوات صغيرة متكرّرة.
         </p>
+      `;
+
+      const suggestion = suggestionFor(bestContentType, bestElement);
+      suggestionResult.innerHTML = `
+        <div class="result-title">✨ اقتراح القناة + أول 3 أفكار محتوى لك:</div>
+        <p><strong>${suggestion.title}</strong></p>
+        <p>🎥 <strong>نوع المحتوى الأنسب:</strong> ${suggestion.type}</p>
+        <p><strong>أفكار جاهزة للبداية:</strong></p>
+        <ul>
+          <li>${suggestion.ideas[0]}</li>
+          <li>${suggestion.ideas[1]}</li>
+          <li>${suggestion.ideas[2]}</li>
+        </ul>
       `;
 
       resultBox.style.display = 'block';
@@ -628,3 +818,4 @@
   </script>
 </body>
 </html>
+
