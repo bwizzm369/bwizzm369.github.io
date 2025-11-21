@@ -5,7 +5,6 @@
   <title>القوالب والملفات الجاهزة | إدارة الحياة بنور الوعي</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* ستايل Sufi Blue العام */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -71,7 +70,6 @@
       margin-top: 24px;
     }
 
-    /* البوكسات ديال القوالب */
     .template-box {
       background: rgba(255, 255, 255, 0.95);
       border-radius: 16px;
@@ -105,7 +103,6 @@
       margin-bottom: 10px;
     }
 
-    /* الجداول */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -137,6 +134,21 @@
       margin-top: 6px;
     }
 
+    .download-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      background: #0f62cc;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .download-btn:hover {
+      background: #0b4da3;
+    }
+
     footer {
       margin-top: 40px;
       padding: 16px;
@@ -162,6 +174,7 @@
           <a href="awareness.html">الوعي اليومي</a>
           <a href="work-life.html">تنظيم العمل والحياة</a>
           <a href="templates.html">القوالب والملفات</a>
+          <a href="niyyah.html">دفتر النوايا والشكر</a>
           <a href="quiz.html">اختبار طريق المحتوى</a>
         </nav>
       </div>
@@ -234,10 +247,12 @@
 
         <p class="hint">
           يمكنك طباعة هذا الجدول من المتصفّح، أو نسخه إلى ملف Word / Google Docs وملئه يوميًا.
-          <p style="text-align: center; margin-top: 10px;">
-  <a href="daily-balance.pdf" download 
-     style="background:#0077cc; color:white; padding:8px 16px; border-radius:8px; text-decoration:none;">
-     ⬇️ تحميل القالب بصيغة PDF
+        </p>
+        <p style="text-align: center;">
+          <!-- الزر يستهدف daily-balance.pdf عندما ترفعينه إلى GitHub -->
+          <a href="daily-balance.pdf" download class="download-btn">
+            ⬇️ تحميل القالب بصيغة PDF
+          </a>
         </p>
       </div>
     </section>
@@ -261,29 +276,20 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td><td></td></tr>
           </tbody>
         </table>
 
         <p class="hint">
           يمكنك إنشاء نسخة أسبوعية من هذا الجدول، واستعمال سطر واحد لكل يوم، أو طباعة جدول منفصل لكل يوم.
+        </p>
+        <p style="text-align: center;">
+          <!-- الزر يستهدف daily-awareness.pdf عندما ترفعينه إلى GitHub -->
+          <a href="daily-awareness.pdf" download class="download-btn">
+            ⬇️ تحميل جدول الوعي اليومي بصيغة PDF
+          </a>
         </p>
       </div>
     </section>
@@ -345,6 +351,12 @@
           في نهاية كل أسبوع، اكتبي في الخانة الأخيرة:  
           "ما الذي تعلّمته من طريقة صرفي؟ وما التعديل الصغير الذي أريد تجربته الأسبوع القادم؟"
         </p>
+        <p style="text-align: center;">
+          <!-- الزر يستهدف money-tracker.pdf عندما ترفعينه إلى GitHub -->
+          <a href="money-tracker.pdf" download class="download-btn">
+            ⬇️ تحميل جدول تتبّع المصاريف بصيغة PDF
+          </a>
+        </p>
       </div>
     </section>
 
@@ -358,5 +370,6 @@
   </script>
 </body>
 </html>
+
 
 
